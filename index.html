@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Rest client</title>
     <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
     <input type="text" id="url" value="http://localhost:3000/hello">
     <button id="call" onclick="makeRequest()">Make a get request</button>
@@ -15,6 +17,17 @@
         <div id="response"></div>
     </div>
     <script src="js/app.js"></script>
-    
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("/sw.js")
+                    .then(res => console.log("service worker registered"))
+                    .catch(err => console.log("service worker not registered", err))
+            })
+        }
+    </script>
+
 </body>
+
 </html>

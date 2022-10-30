@@ -1,12 +1,3 @@
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-        navigator.serviceWorker
-            .register("/rest_client/sw1.js")
-            .then(res => console.log("service worker registered"))
-            .catch(err => console.log("service worker not registered", err))
-    })
-}
-
 
 const input = document.querySelector('#url')
 const response = document.querySelector('#response')

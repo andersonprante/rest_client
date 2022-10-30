@@ -2,6 +2,7 @@
     "name": "Client",
     "short_name": "Client",
     "start_url": "/rest_client/index.html",
+    "id": "/rest_client/index.html",
     "display": "standalone",
     "background_color": "#fdfdfd",
     "theme_color": "#db4938",

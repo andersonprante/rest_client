@@ -116,7 +116,7 @@ const assets = [
   `${HOST}/images/icons/ios/192.png`,
   `${HOST}/images/icons/ios/256.png`,
   `${HOST}/images/icons/ios/512.png`,
-  `${HOST}/images/icons/ios/1024.pn`
+  `${HOST}/images/icons/ios/1024.png`
 ]
 
 self.addEventListener('install', function(e) {
@@ -145,5 +145,5 @@ self.addEventListener('fetch', function(event) {
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register(`${HOST}/sw.js`)
-    .then(function () { console.log('Service Worker Registered'); });
+    .then(function () { console.log('[ServiceWorker] Registered'); });
 }

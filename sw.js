@@ -1,8 +1,6 @@
 const HOST='https://andersonprante.github.io/rest_client'
-const elV = document.querySelector("#versao")
 
 const cacheName = "v2.2"
-elV.innerHTML = cacheName
 
 const assets = [
   `${HOST}/index.html`,

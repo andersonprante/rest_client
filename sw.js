@@ -1,6 +1,9 @@
 const HOST='https://andersonprante.github.io/rest_client'
+const elV = document.querySelector("#versao")
 
-const cacheName = "client-v2"
+const cacheName = "v2.1"
+elV.innerHTML = cacheName
+
 const assets = [
   `${HOST}/index.html`,
   `${HOST}/manifest.json`,
@@ -134,7 +137,7 @@ self.addEventListener('fetch', function(event) {
     caches.open(cacheName).then(function(cache) {
       return cache.match(event.request).then(function (response) {
         return response || fetch(event.request).then(function(response) {
-          cache.put(event.request, response.clone());
+          // cache.put(event.request, response.clone());
           return response;
         });
       });

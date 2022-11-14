@@ -1,6 +1,6 @@
 const HOST='https://andersonprante.github.io/rest_client'
 
-const cacheName = "v2.4"
+const cacheName = "v2.5"
 
 const assets = [
   `${HOST}/index.html`,

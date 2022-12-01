@@ -6,7 +6,7 @@ const makeRequest = async () => {
     response.innerHTML = ''
     url = input.value
     const options = {
-        mode: 'cors',
+        mode: 'no-cors',
     }
     const result = await fetch(url, options).then(response => response.text())
     response.innerHTML = result

@@ -5,20 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' *"> -->
+
     <title>Rest client</title>
-    <link rel="manifest" href="manifest.json">
+    <!-- <link rel="manifest" href="manifest.json"> -->
 </head>
 
 <body>
-    <input type="text" id="url" value="http://localhost:3000/hello">
+    <div>
+        <input type="text" id="url" value="https://192.168.247.107:3000/hello" size="50">
+    </div>
     <button id="call" onclick="makeRequest()">Make a get request</button>
-    <p id="versao">v2.6</p>
+    <p id="versao">v0.0.1</p>
     <div>
         <p>Resultado: </p>
         <div id="response"></div>
     </div>
     <script src="js/app.js"></script>
-    <script src="sw.js"></script>
+    <!-- <script src="sw.js"></script> -->
 </body>
 
 </html>
